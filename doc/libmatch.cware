@@ -1,0 +1,96 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TH "LIBMATCH" "SECTION_HERE" "June 18, 2022" \
+" " "CATEGORY_NAME_HERE"
+.SH NAME
+libmatch - collection of string parsing utilities
+
+.SH SYNOPSIS
+
+.SH DESCRIPTION
+The
+.BR "libmatch" "(cware)"
+library provides a collection of generic string parsing utilities. The intention is to
+make parsing strings, and reporting errors in the formatting of these strings easier.
+The functions provided by the library are centered around a
+.B "cursor"
+object, which is used as a container for information like the line
+and character number, the position in the string, and more. This allows for incremental
+parsing of a string.
+
+The library is quite useful for projects such as
+
+.IP "\[bu]" 0.4i
+Programming or configuration language parsing
+.IP "\[bu]" 0.4i
+Finding patterns in strings (similar to regex)
+.IP "" 0i
+
+As well as much more. The
+.BR "libmatch" "(cware)"
+library is organized into groups of functions. You can find the functions that
+are available to you in the following sections.
+
+.TS
+tab(;);
+lb l
+_ _
+lb l
+.
+Manual;Description;
+libmatch-cursor(SECTION_HERE);String cursor handling;
+libmatch-match(SECTION_HERE);General string parsing;
+libmatch-read(SECTION_HERE);Reading from the string;
+libmatch-condition(SECTION_HERE);Checks for the cursor position;
+.TE
+
+.SH SEE ALSO
+.BR "cware" "(cware),"
+.BR "csource" "(cware)"

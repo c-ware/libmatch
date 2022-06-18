@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TH "LIBMATCH_CURSOR_INIT" "SECTION_HERE" "June 18, 2022" \
+" " "CATEGORY_NAME_HERE"
+.SH NAME
+libmatch_cursor_init - initialize a new list
+
+.SH SYNOPSIS
+.B "#include ""libmatch.h"""
+.br
+
+.BI "struct LibmatchCursor libmatch_cursor_init(char *" "buffer" ", int " "length" ");
+.br 
+.SH DESCRIPTION
+The
+.B "libmatch_cursor_init"
+function
+will initialize a new cursor using a pre-allocated buffer. The buffer can
+either be on the stack, or the heap. If a heap buffer is used, then the cursor
+will either have to be freed manually, or be released with the
+.BR "libmatch_cursor_free" "(cware)"
+function.
+
+.SH SEE ALSO
+.BR "cware" "(cware),"
+.BR "libmatch" "(cware)"
+.BR "libmatch-cursor" "(cware)"

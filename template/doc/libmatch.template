@@ -1,0 +1,42 @@
+include(./libmatch.m4)
+
+M4_HEADER()
+M4_NAME_START(`collection of string parsing utilities')
+
+M4_SYNOPSIS_START()
+
+M4_DESCRIPTION_START()
+The
+M4_REFERENCE(`libmatch', `cware')
+library provides a collection of generic string parsing utilities. The intention is to
+make parsing strings, and reporting errors in the formatting of these strings easier.
+The functions provided by the library are centered around a
+M4_BOLD(`cursor')
+object, which is used as a container for information like the line
+and character number, the position in the string, and more. This allows for incremental
+parsing of a string.
+
+The library is quite useful for projects such as
+M4_BULLETED_LIST_START()
+M4_BULLETED_LIST_START_ENTRY(`0.4')
+M4_BULLETED_LIST_ENTRY(`Programming or configuration language parsing')
+M4_BULLETED_LIST_START_ENTRY(`0.4')
+M4_BULLETED_LIST_ENTRY(`Finding patterns in strings (similar to regex)')
+M4_BULLETED_LIST_END()
+
+As well as much more. The
+M4_REFERENCE(`libmatch', `cware')
+library is organized into groups of functions. You can find the functions that
+are available to you in the following sections.
+
+M4_MANUAL_TABLE_START()
+M4_TABLE_ENTRY(`Manual', `Description')
+M4_TABLE_ENTRY(`libmatch-cursor(M4_SECTION)', `String cursor handling')
+M4_TABLE_ENTRY(`libmatch-match(M4_SECTION)', `General string parsing')
+M4_TABLE_ENTRY(`libmatch-read(M4_SECTION)', `Reading from the string')
+M4_TABLE_ENTRY(`libmatch-condition(M4_SECTION)', `Checks for the cursor position')
+M4_TABLE_END()
+
+M4_SEE_ALSO_START()
+M4_SEE_ALSO_MAN(`cware', `cware')
+M4_SEE_ALSO_MAN_LAST(`csource', `cware')

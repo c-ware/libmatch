@@ -1,0 +1,86 @@
+include(./libmatch.m4)
+
+M4_HEADER()
+M4_NAME_START(`string cursor handling')
+
+## libmatch_cursor_init
+M4_SYNOPSIS_START()
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`struct LibmatchCursor libmatch_cursor_init(char *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`buffer')
+M4_SYNOPSIS_FUNC_TYPE(`, int ')
+M4_SYNOPSIS_FUNC_ARGUMENT(`length')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_from_stream
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`struct LibmatchCursor libmatch_cursor_from_stream(FILE *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`stream')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_enable_pushback
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`void libmatch_cursor_enable_pushback(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_disable_pushback
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`void libmatch_cursor_disable_pushback(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_ungetch
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`void libmatch_cursor_ungetch(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_free
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`void libmatch_cursor_free(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_getch
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`int libmatch_cursor_getch(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_END()
+
+## libmatch_cursor_unwind
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`int libmatch_cursor_unwind(struct LibmatchCursor *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`cursor')
+M4_SYNOPSIS_FUNC_TYPE(`, int ')
+M4_SYNOPSIS_FUNC_ARGUMENT(`distance')
+M4_SYNOPSIS_FUNC_END()
+
+M4_DESCRIPTION_START()
+The cursor group contains functions which have the main purpose of controlling
+a cursor. While all
+M4_REFERENCE(`libmatch', `cware')
+functions operate
+M4_BOLD(`on')
+a cursor object, the main purpose of these functions is to change something
+about the cursor object directly, rather than as a doing it as a step in a
+larger whole.
+
+What follows is a list of each function's manual, and a brief description of
+the function.
+
+M4_MANUAL_TABLE_START()
+M4_TABLE_ENTRY(`Manual', `Description')
+M4_TABLE_ENTRY(`libmatch_cursor_init(SECTION_HERE)', `initialize a new cursor')
+M4_TABLE_ENTRY(`libmatch_cursor_from_stream(SECTION_HERE)', `consume a stream and write it to a heap buffer')
+M4_TABLE_ENTRY(`libmatch_cursor_enable_pushback(SECTION_HERE)', `enable pushback on a cursor')
+M4_TABLE_ENTRY(`libmatch_cursor_disable_pushback(SECTION_HERE)', `disable pushback on a cursor')
+M4_TABLE_ENTRY(`libmatch_ungetch(SECTION_HERE)', `push the cursor back one character')
+M4_TABLE_ENTRY(`libmatch_free(SECTION_HERE)', `release a cursor with a heap buffer from memory')
+M4_TABLE_ENTRY(`libmatch_getch(SECTION_HERE)', `return the current character, and advance to the next')
+M4_TABLE_ENTRY(`libmatch_unwind(SECTION_HERE)', `perform multiple ungetchs at once')
+M4_TABLE_END()
+
+M4_SEE_ALSO_START()
+M4_SEE_ALSO_MAN(`cware', `cware')
+M4_SEE_ALSO_MAN_LAST(`libmatch', `cware')

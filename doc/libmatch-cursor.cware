@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TH "LIBMATCH-CURSOR" "SECTION_HERE" "June 18, 2022" \
+" " "CATEGORY_NAME_HERE"
+.SH NAME
+libmatch-cursor - string cursor handling
+
+.SH SYNOPSIS
+.BI "struct LibmatchCursor libmatch_cursor_init(char *" "buffer" ", int " "length" ");
+.br 
+.BI "struct LibmatchCursor libmatch_cursor_from_stream(FILE *" "stream" ");
+.br 
+.BI "void libmatch_cursor_enable_pushback(struct LibmatchCursor *" "cursor" ");
+.br 
+.BI "void libmatch_cursor_disable_pushback(struct LibmatchCursor *" "cursor" ");
+.br 
+.BI "void libmatch_cursor_ungetch(struct LibmatchCursor *" "cursor" ");
+.br 
+.BI "void libmatch_cursor_free(struct LibmatchCursor *" "cursor" ");
+.br 
+.BI "int libmatch_cursor_getch(struct LibmatchCursor *" "cursor" ");
+.br 
+.BI "int libmatch_cursor_unwind(struct LibmatchCursor *" "cursor" ", int " "distance" ");
+.br 
+.SH DESCRIPTION
+The cursor group contains functions which have the main purpose of controlling
+a cursor. While all
+.BR "libmatch" "(cware)"
+functions operate
+.B "on"
+a cursor object, the main purpose of these functions is to change something
+about the cursor object directly, rather than as a doing it as a step in a
+larger whole.
+
+What follows is a list of each function's manual, and a brief description of
+the function.
+
+.TS
+tab(;);
+lb l
+_ _
+lb l
+.
+Manual;Description;
+libmatch_cursor_init(SECTION_HERE);initialize a new cursor;
+libmatch_cursor_from_stream(SECTION_HERE);consume a stream and write it to a heap buffer;
+libmatch_cursor_enable_pushback(SECTION_HERE);enable pushback on a cursor;
+libmatch_cursor_disable_pushback(SECTION_HERE);disable pushback on a cursor;
+libmatch_ungetch(SECTION_HERE);push the cursor back one character;
+libmatch_free(SECTION_HERE);release a cursor with a heap buffer from memory;
+libmatch_getch(SECTION_HERE);return the current character, and advance to the next;
+libmatch_unwind(SECTION_HERE);perform multiple ungetchs at once;
+.TE
+
+.SH SEE ALSO
+.BR "cware" "(cware),"
+.BR "libmatch" "(cware)"

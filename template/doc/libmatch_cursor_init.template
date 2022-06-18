@@ -1,0 +1,26 @@
+include(./libmatch.m4)
+
+M4_HEADER()
+M4_NAME_START(`initialize a new list')
+
+M4_SYNOPSIS_START()
+M4_INCLUSIONS()
+M4_SYNOPSIS_FUNC_START()
+M4_SYNOPSIS_FUNC_TYPE(`struct LibmatchCursor M4_FILENAME_ORIGINAL`'(char *')
+M4_SYNOPSIS_FUNC_ARGUMENT(`buffer')
+M4_SYNOPSIS_FUNC_TYPE(`, int ')
+M4_SYNOPSIS_FUNC_ARGUMENT(`length')
+M4_SYNOPSIS_FUNC_END()
+
+M4_DESCRIPTION_START()
+M4_DESCRIPTION_FUNC_INTRO()
+will initialize a new cursor using a pre-allocated buffer. The buffer can
+either be on the stack, or the heap. If a heap buffer is used, then the cursor
+will either have to be freed manually, or be released with the
+M4_REFERENCE(`libmatch_cursor_free', `cware')
+function.
+
+M4_SEE_ALSO_START()
+M4_SEE_ALSO_MAN(`cware', `cware')
+M4_SEE_ALSO_MAN_LAST(`libmatch', `cware')
+M4_SEE_ALSO_MAN_LAST(`libmatch-cursor', `cware')
