@@ -4,7 +4,7 @@
 
 CC=cl
 LINKER=link
-OBJS=src\libmatch.obj src\read.obj src\cursor.obj src\match.obj src\conditions.obj 
+OBJS=src\read.obj src\cond.obj src\cursor.obj src\match.obj 
 TESTS=tests\stream.exe 
 
 .SUFFIXES: .c .exe .obj

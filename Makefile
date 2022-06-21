@@ -5,7 +5,7 @@
 CC=cc
 PREFIX=/usr/local
 CFLAGS=
-OBJS=src/libmatch.o src/read.o src/cursor.o src/match.o src/conditions.o 
+OBJS=src/read.o src/cond.o src/cursor.o src/match.o 
 TESTS=tests/stream.out 
 DOCS=./doc/libmatch.cware ./doc/libmatch_cursor_init.cware ./doc/libmatch-cursor.cware 
 MANNAMES=libmatch.cware libmatch_cursor_init.cware libmatch-cursor.cware 

@@ -47,7 +47,7 @@
 
 
 
-.TH "LIBMATCH" "SECTION_HERE" "June 18, 2022" \
+.TH "LIBMATCH" "SECTION_HERE" "June 21, 2022" \
 " " "CATEGORY_NAME_HERE"
 .SH NAME
 libmatch - collection of string parsing utilities
