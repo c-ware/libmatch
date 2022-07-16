@@ -47,7 +47,7 @@
 
 
 
-.TH "LIBMATCH_CURSOR_INIT" "SECTION_HERE" "June 21, 2022" \
+.TH "LIBMATCH_CURSOR_INIT" "SECTION_HERE" "July 16, 2022" \
 " " "CATEGORY_NAME_HERE"
 .SH NAME
 libmatch_cursor_init - initialize a new list
